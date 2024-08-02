@@ -13,6 +13,12 @@ if [ -z "$repo_info" ]; then
     exit 1
 fi
 
+# Parse the --url-only flag
+url_only=false
+if [[ "$1" == "--url-only" ]]; then
+    url_only=true
+fi
+
 # Get all files tracked by git
 files=$(git ls-files | grep -v ".*meta.xml")
 
@@ -52,5 +58,10 @@ default_branch=$(git symbolic-ref refs/remotes/origin/HEAD | sed 's@^refs/remote
 # Construct the GitHub URL
 url="https://github.com/$repo_info/blob/$default_branch/$random_file#L$random_line"
 
-# Open the URL in the default web browser
-echo "$url"
+if [ "$url_only" = true ]; then
+    # Print the URL if --url-only flag is used
+    echo "$url"
+else
+    # Open the URL in the default web browser
+    open "$url"
+fi
