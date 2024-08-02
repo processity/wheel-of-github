@@ -20,7 +20,7 @@ if [[ "$1" == "--url-only" ]]; then
 fi
 
 # Get all files tracked by git
-files=$(git ls-files | grep -v ".*meta.xml")
+files=$(git ls-files | grep -Ev ".*(trigger|cls)-meta.xml")
 
 # Check if the list is empty
 if [ -z "$files" ]; then
