@@ -1,6 +1,6 @@
 # Wheel of GitHub
 
-This script is a fun exercise for dev teams. Or at least I think it's fun. 
+This script is a fun exercise for dev teams. Or at least, I think it's fun. 
 
 It comes from the idea that ALL CODE IS INTERESTING, if we choose to actually look at it. When we're writing code,
 we're constantly making decisions and those decisions are interesting. Sometimes, we're doing things that the rest of 
@@ -9,7 +9,7 @@ your team are unaware of. These things might seem boring to you, but not to them
 So Wheel of GitHub combats the problem where code reviews end up focusing on the extremely polished code, or the 
 extremely messy code. Wheel of GitHub is about everything in-between. It's about finding the interest in quotidian code.
 
-Wheel of GitHub will pick a random files and line in your codeabase. Then, your team can talk together about what 
+Wheel of GitHub will pick a random files and line in your codebase. Then, your team can talk together about what 
 they find:
 
 * Why does this even exist?
